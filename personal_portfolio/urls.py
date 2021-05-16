@@ -21,7 +21,7 @@ def projects_redirect(request):
     return redirect("project_index")
 
 urlpatterns = [
-    path("/",projects_redirect,name='home-url'),
+    path("",projects_redirect,name='home-url'),
     path('admin/', admin.site.urls),
     path('projects/', include('projects.urls')),
     path('blog/', include('blog.urls')),
